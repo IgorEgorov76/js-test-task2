@@ -1,0 +1,357 @@
+body {
+  font-family: "ProximaNovaCond-Regular";
+  color: #444444;
+}
+
+.container {
+  max-width: 1250px;
+  margin: auto;
+}
+
+.header-block {
+  &__container {
+    height: 85px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+  }
+
+  &__menu-item {
+    margin-left: 20px;
+  }
+
+  &__img {
+    max-height: 25px;
+  }
+}
+
+.first-block {
+  background-image: url("img/first-block__background.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 600px;
+  margin-bottom: 100px;
+
+  &__wrapper {
+    padding-left: 70px;
+    padding-top: 158px;
+  }
+
+  &__text {
+    font-family: ProximaNovaCond-Bold;
+    font-size: 56px;
+    max-width: 700px;
+    margin-bottom: 60px;
+  }
+
+  &__btn {
+    width: 158px;
+    height: 70px;
+    background-color: #B01736;
+    color: #FFFFFF;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+  }
+}
+
+.description-block {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+
+  &__wrapper {
+    width: 1110px;
+    height: 350px;
+    box-shadow: 0 0 32px rgba(0, 0, 0, 0.08);
+  }
+
+  &__text {
+    font-family: ProximaNovaCond-Bold;
+    padding: 99px 110px;
+    font-size: 32px;
+    text-align: center;
+
+
+    &_sup {
+      padding: 0;
+      color: #B01736;
+    }
+  }
+}
+
+.statistics-block {
+  margin-bottom: 100px;
+  display: flex;
+  justify-content: center;
+
+  &__wrapper {
+    flex-wrap: wrap;
+    display: flex;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  &__item-main-text {
+    font-family: ProximaNovaCond-Bold;
+    font-size: 80px;
+    color: #A30C33;
+  }
+
+  &__item-sup-text {
+    max-width: 220px;
+    font-size: 18px;
+  }
+}
+
+.map-block {
+  position: relative;
+  margin-bottom: 100px;
+
+  &__menu {
+    height: 80px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.06);
+    padding-left: 70px;
+    padding-right: 70px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 90px;
+  }
+
+  &__menu-item-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 736px;
+  }
+
+  &__menu-item {
+    display: flex;
+    cursor: pointer;
+  }
+
+  &__menu-item-main {
+    cursor: pointer;
+  }
+
+  &__menu-item-btn {
+    border: 3px solid white;
+    background-color: #FFFFFF;
+    color: #444444;
+    font-family: ProximaNovaCond-Bold;
+    font-size: 18px;
+    height: 100%;
+    cursor: inherit;
+
+    &_active {
+      color: #A30C33;
+      border-bottom: 3px solid #A30C33;
+    }
+  }
+
+  &__menu-item-btn:hover {
+    text-shadow: 0.5px 0;
+  }
+
+  &__menu-item-main-btn {
+    border: none;
+    background-color: #FFFFFF;
+    color: #444444;
+    font-family: ProximaNovaCond-Bold;
+    font-size: 24px;
+    height: 100%;
+    cursor: inherit;
+  }
+
+  &__menu-item-main-btn:hover {
+    text-shadow: 0.5px 0;
+  }
+
+  &__menu-item-symbol {
+    margin-left: 12px;
+
+    &_rotate {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__popup {
+    display: none;
+  }
+
+  &__popup-active {
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 30px 80px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 0 32px rgba(0, 0, 0, 0.06);
+    background-color: #FFFFFF;
+  }
+
+  &__popup-item {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+  }
+
+  &__popup-item-region {
+    font-family: ProximaNovaCond-Bold;
+    margin-bottom: 10px;
+  }
+
+  &__popup-item-city:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  &__map-points {
+
+    &_off {
+      display: none;
+    }
+  }
+}
+
+.mission-block {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-color: #A30C33;
+  height: 471px;
+  margin-bottom: 100px;
+
+  &__wrapper {
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px;
+  }
+
+  &__title {
+    font-family: ProximaNovaCond-Bold;
+    font-size: 56px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  &__text {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  &__background-img-1 {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    opacity: 0.6;
+  }
+
+  &__background-img-2 {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    opacity: 0.6;
+  }
+}
+
+.compensation-block {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 100px;
+
+  &__wrapper {
+    padding: 80px 30px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.06);
+  }
+
+  &__pack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 890px;
+    padding-right: 80px;
+    padding-left: 80px;
+    padding-bottom: 70px;
+    border-bottom: 1px solid #eae7e7;
+    margin-bottom: 70px;
+
+    &_sub {
+      border-bottom: none;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  &__pack-block {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    &_sub {
+      max-width: 480px;
+    }
+  }
+
+  &__pack-title {
+    font-family: ProximaNovaCond-Bold;
+    font-size: 56px;
+    margin-bottom: 50px;
+}
+
+  &__pack-subtitle {
+    font-family: ProximaNovaCond-Bold;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 50px;
+
+    &_red {
+      color: #B01736;
+    }
+  }
+
+  &__pack-block-element {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    width: 110px;
+  }
+
+  &__pack-block-element-text {
+    margin-top: 10px;
+    font-size: 18px;
+    width: 130px;
+    text-align: center;
+  }
+}
+
+.line-business-block {
+  margin-bottom: 100px;
+
+
+}
