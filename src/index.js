@@ -1,58 +1,54 @@
 import './index.html';
 import './index.scss';
 
-
-
-// Переключение стиля кнопок и регионов по клику в map-block
-
-let mapBlockButtons = document.querySelectorAll('.map-block__menu-item-btn');
-let mapBlockArray1 = [...mapBlockButtons];
-let mapBlockPoints = document.querySelectorAll('.map-block___map-points')
-let mapBlockArray2 = [...mapBlockPoints];
-
-mapBlockArray1.forEach(button => {
-    button.addEventListener('click', function () {
-        if (button.classList.contains('map-block__menu-item-btn_active')) {
-        }
-        else {
-            for (let i = 0; i < mapBlockArray1.length; i++) {
-                mapBlockArray1[i].classList.remove('map-block__menu-item-btn_active')
+// Swiper
+let swiper = new Swiper(".mySwiper", {
+    slidesPerView: 2,
+    spaceBetween: 0,
+    loop: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    navigation: {
+        nextEl: ".swiperNext",
+        prevEl: ".swiperPrev",
+    },
+    breakpoints: {
+        300: {
+            slidesPerView: 1,
+            pagination: {
+                dynamicBullets: true
             }
-            button.classList.add('map-block__menu-item-btn_active')
+        },
+        700: {
+            slidesPerView: 2,
+        },
+    }
+});
 
-            if (button.id == 0) {
-                for (let i = 1; i < mapBlockArray2.length; i++) {
-                    mapBlockArray2[i].classList.remove('map-block__map-points_off')
-                }
-            }
-            else {
-                for (let i = 1; i < mapBlockArray2.length; i++) {
-                    mapBlockArray2[i].classList.add('map-block__map-points_off')
-                }
-                mapBlockArray2[button.id].classList.remove('map-block__map-points_off')
-            }
-        }
-    })
+// Модальное окно
+let img1 = document.querySelector('#modal-img1')
+let img2 = document.querySelector('#modal-img2')
+let modalBlock = document.querySelector('#modal-block')
+let body = document.querySelector('#body')
+
+
+img1.addEventListener('click', function () {
+    img1.classList.remove('navigation-block__wrapper-list_active')
+    img1.classList.add('navigation-block__wrapper-list_disabled')
+    img2.classList.remove('navigation-block__wrapper-list_disabled')
+    img2.classList.add('navigation-block__wrapper-list_active')
+    modalBlock.classList.add('modal-block_active')
+    body.classList.add('body-hidden')
 })
 
-// Всплывающий список в map-block и поворот стрелки
-
-let mapBlockArrowBlock = document.querySelector('.map-block__menu-item-main')
-let mapBlockArrow = document.querySelector('.map-block__menu-item-symbol')
-let mapBlockPopup = document.querySelector('.map-block__popup')
-
-mapBlockArrowBlock.addEventListener('click', function () {
-    if (mapBlockArrow.classList.contains('map-block__menu-item-symbol_rotate')) {
-        mapBlockArrow.classList.remove('map-block__menu-item-symbol_rotate')
-        mapBlockPopup.classList.remove('map-block__popup-active')
-        mapBlockPopup.classList.add('map-block__popup')
-    }
-    else {
-        mapBlockArrow.classList.add('map-block__menu-item-symbol_rotate')
-        mapBlockPopup.classList.remove('map-block__popup')
-        mapBlockPopup.classList.add('map-block__popup-active')
-    }
+img2.addEventListener('click', function () {
+    img2.classList.remove('navigation-block__wrapper-list_active')
+    img2.classList.add('navigation-block__wrapper-list_disabled')
+    img1.classList.remove('navigation-block__wrapper-list_disabled')
+    img1.classList.add('navigation-block__wrapper-list_active')
+    modalBlock.classList.remove('modal-block_active')
+    body.classList.remove('body-hidden')
 })
-
-
 
